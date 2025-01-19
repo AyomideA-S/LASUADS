@@ -1,0 +1,35 @@
+{
+  "name": "LASUADS",
+  "dockerFile": "Dockerfile",
+  "context": "..",
+  "forwardPorts": [5000, 5432],
+  "postCreateCommand": "apt-get update && apt-get install -y git postgresql postgresql-contrib && service postgresql start && pip install -r requirements.txt",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "editor.formatOnSave": true,
+        "python.defaultInterpreterPath": "/usr/local/bin/python"
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-python.flask",
+        "ms-python.vscode-pylance",
+        "ms-python.isort",
+        "ms-python.black-formatter",
+        "ms-python.mypy-type-checker",
+        "ms-python.flake8",
+        "redhat.vscode-yaml",
+        "donjayamanne.githistory",
+        "github.copilot",
+        "github.copilot-chat",
+        "github.codespaces",
+        "github.vscode-pull-request-github",
+        "davidanson.vscode-markdownlint",
+        "eamodio.gitlens",
+        "foxundermoon.shell-format",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  }
+}
